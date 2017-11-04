@@ -12,9 +12,14 @@ var a = Vector2(0, 0)
 export(float) var SPEED_FACTOR = 100.0
 export(float) var FRICTION_FACTOR = 5.0
 export(float) var GRAVITY_FACTOR = 5.0
+var effect = null
 
 func _ready():
 	set_fixed_process(true)
+
+func load_effect(name):
+	var effect = load("res://scripts/level_" + name + ".gd").new()
+	effect.apply(self)
 
 func update_pos(delta):
 	v += a * delta
