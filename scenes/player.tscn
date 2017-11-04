@@ -59,8 +59,6 @@ JUMP_FACTOR = 13.0
 
 frames = SubResource( 2 )
 animation = "idle"
-frame = 2
-playing = true
 
 [node name="collision" type="CollisionPolygon2D" parent="."]
 
