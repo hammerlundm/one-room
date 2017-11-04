@@ -82,7 +82,7 @@ stream/paused = false
 stream/loop_restart_time = 0.0
 stream/buffering_ms = 500
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="VHS" type="Sprite" parent="."]
 
 visibility/opacity = 0.88
 visibility/blend_mode = 3
