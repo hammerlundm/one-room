@@ -5,6 +5,7 @@ var G = Vector2(0.0, 1.0)
 var SPEED = 1.0
 var JUMP_HEIGHT = 1.0
 var FRICTION = 1.0
+var INIT_POS = Vector2(0, 0)
 
 #other variables
 var v = Vector2(0, 0)
@@ -21,6 +22,7 @@ func apply():
 func _ready():
 	set_fixed_process(true)
 	apply()
+	set_pos(INIT_POS)
 
 func do_friction(delta):
 	var f = pow(0.5, FRICTION * FRICTION_FACTOR * delta)
@@ -39,7 +41,7 @@ func get_input(delta):
 		a.x -= SPEED * SPEED_FACTOR * delta
 	if Input.is_action_pressed("ui_right"):
 		a.x += SPEED * SPEED_FACTOR * delta
-	if Input.is_action_pressed("ui_select") and is_colliding() and abs(get_collision_normal().y + 1) < 0.01:
+	if Input.is_action_pressed("ui_select") and is_colliding() and abs(get_collision_normal().x) < 0.01:
 		v.y -= JUMP_HEIGHT * JUMP_FACTOR
 
 func unstick(delta):
