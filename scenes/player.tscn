@@ -35,7 +35,7 @@ polygon = Vector2Array( 0, 0, 192, 0, 192, 192, 0, 192 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="camera" type="Camera2D" parent="."]
 
 offset = Vector2( -512, -512 )
 anchor_mode = 0
