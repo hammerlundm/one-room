@@ -5,7 +5,7 @@ var door_scene = preload("res://scenes/door.tscn")
 var player = null
 var door = null
 
-var levels = ["start", "reverse_gravity", "0g", "fast", "ice", "reverse_controls"]
+var levels = ["start", "bounce", "reverse_gravity", "0g", "fast", "ice", "reverse_controls"]
 var current = 0
 
 func player_enter_door(body):

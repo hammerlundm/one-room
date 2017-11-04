@@ -41,7 +41,7 @@ transform/pos = Vector2( 2254.57, 1152.35 )
 
 [node name="platform3" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 2556.43, 619.463 )
+transform/pos = Vector2( 2566.43, 619.463 )
 
 [node name="platform4" parent="." instance=ExtResource( 3 )]
 
@@ -60,13 +60,13 @@ transform/scale = Vector2( 6.47754, 1 )
 
 [node name="wallLeft" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( -197.602, 1685.47 )
+transform/pos = Vector2( -192, 1536 )
 transform/rot = 90.0
 transform/scale = Vector2( 3.40486, 1 )
 
 [node name="wallRight" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 3067.46, 1626.95 )
+transform/pos = Vector2( 3072, 1626.95 )
 transform/rot = 90.0
 transform/scale = Vector2( 3.40486, 1 )
 
