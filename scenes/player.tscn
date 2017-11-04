@@ -23,6 +23,8 @@ script/script = ExtResource( 1 )
 
 texture = ExtResource( 2 )
 centered = false
+region = true
+region_rect = Rect2( 0, 0, 128, 128 )
 
 [node name="collision" type="CollisionPolygon2D" parent="."]
 
