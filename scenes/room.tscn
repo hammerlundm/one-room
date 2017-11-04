@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/room.png" type="Texture" id=2]
+[ext_resource path="res://scenes/platform.tscn" type="PackedScene" id=3]
 
 [node name="room" type="Control"]
 
@@ -17,11 +18,18 @@ margin/bottom = 1024.0
 [node name="player" parent="." instance=ExtResource( 1 )]
 
 z/z = 1
+SPEED_FACTOR = 150.0
+GRAVITY_FACTOR = 10.0
+JUMP_FACTOR = 10.0
 
 [node name="background" type="Sprite" parent="."]
 
 texture = ExtResource( 2 )
 centered = false
 modulate = Color( 0.359375, 0.0715942, 0.0715942, 1 )
+
+[node name="platform" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 160, 832 )
 
 
