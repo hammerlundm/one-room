@@ -6,7 +6,7 @@ var player = null
 var door = null
 var ui = null
 
-var levels = ["start", "static", "0g", "sonar", "invisible", "switch_gravity", "bounce", "reverse_gravity", "0g", "fast", "ice",
+var levels = ["start", "static", "0g", "sonar", "invisible", "switch_gravity", "bounce", "reverse_gravity",
               "reverse_controls"]
 var current = 0
 

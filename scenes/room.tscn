@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/music.ogg" type="AudioStream" id=2]
 [ext_resource path="res://assets/vhs.png" type="Texture" id=3]
 [ext_resource path="res://assets/arial.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://assets/room.png" type="Texture" id=5]
+[ext_resource path="res://assets/room.jpg" type="Texture" id=5]
 [ext_resource path="res://scenes/platform.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
@@ -74,10 +74,10 @@ max_lines_visible = -1
 
 [node name="background" type="Sprite" parent="."]
 
+transform/pos = Vector2( -5, 0 )
 z/z = -1
 texture = ExtResource( 5 )
 centered = false
-modulate = Color( 0.429688, 0.0436401, 0.0436401, 1 )
 
 [node name="platform" parent="." instance=ExtResource( 6 )]
 
