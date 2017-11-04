@@ -19,14 +19,56 @@ script/script = ExtResource( 1 )
 
 [node name="background" type="Sprite" parent="."]
 
-transform/pos = Vector2( 1, 0 )
 texture = ExtResource( 2 )
 centered = false
 modulate = Color( 0.429688, 0.0436401, 0.0436401, 1 )
 
 [node name="platform" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 160, 832 )
+transform/pos = Vector2( 883.858, 1213.95 )
+
+[node name="platform5" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 991.667, 483.932 )
+
+[node name="platform1" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 1647.76, 899.765 )
+
+[node name="platform2" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 2254.57, 1152.35 )
+
+[node name="platform3" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 2556.43, 619.463 )
+
+[node name="platform4" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 2.90747, 896.685 )
+transform/scale = Vector2( 1, 4 )
+
+[node name="floor" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -120.595, 1540.46 )
+transform/scale = Vector2( 6.47754, 1 )
+
+[node name="ceiling" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -114.435, -193.722 )
+transform/scale = Vector2( 6.47754, 1 )
+
+[node name="wallLeft" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -197.602, 1685.47 )
+transform/rot = 90.0
+transform/scale = Vector2( 3.40486, 1 )
+
+[node name="wallRight" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 3067.46, 1626.95 )
+transform/rot = 90.0
+transform/scale = Vector2( 3.40486, 1 )
 
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 

@@ -19,9 +19,9 @@ collision/mask = 1
 collision/margin = 0.08
 script/script = ExtResource( 1 )
 SPEED_FACTOR = 150.0
-FRICTION_FACTOR = 5.0
-GRAVITY_FACTOR = 10.0
-JUMP_FACTOR = 10.0
+FRICTION_FACTOR = 4.5
+GRAVITY_FACTOR = 11.0
+JUMP_FACTOR = 13.0
 
 [node name="sprite" type="Sprite" parent="."]
 
