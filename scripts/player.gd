@@ -5,7 +5,7 @@ var G = Vector2(0.0, 1.0)
 var SPEED = 1.0
 var JUMP_HEIGHT = 1.0
 var FRICTION = 1.0
-var INIT_POS = Vector2(1700, 800)
+var INIT_POS = Vector2(1850, 2100)
 
 #other variables
 var v = Vector2(0, 0)
