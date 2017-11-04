@@ -6,7 +6,7 @@
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 0, 0, 256, 0, 256, 256, 0, 256 )
+points = Vector2Array( 0, 0, 192, 0, 192, 192, 0, 192 )
 
 [node name="player" type="KinematicBody2D"]
 
@@ -18,19 +18,41 @@ collision/layers = 1
 collision/mask = 1
 collision/margin = 0.08
 script/script = ExtResource( 1 )
+SPEED_FACTOR = 100.0
+FRICTION_FACTOR = 5.0
+GRAVITY_FACTOR = 5.0
 
 [node name="sprite" type="Sprite" parent="."]
 
 texture = ExtResource( 2 )
 centered = false
-region = true
 region_rect = Rect2( 0, 0, 128, 128 )
 
 [node name="collision" type="CollisionPolygon2D" parent="."]
 
 build_mode = 0
-polygon = Vector2Array( 0, 0, 256, 0, 256, 256, 0, 256 )
+polygon = Vector2Array( 0, 0, 192, 0, 192, 192, 0, 192 )
 shape_range = Vector2( 0, 0 )
 trigger = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+offset = Vector2( -512, -512 )
+anchor_mode = 0
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = 0
+limit/top = 0
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
 
 
