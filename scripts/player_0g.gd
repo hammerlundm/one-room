@@ -18,3 +18,4 @@ func do_friction(delta):
 func apply():
 	G = Vector2(0, 0)
 	JUMP_HEIGHT = 0
+	sprite.play("jump")

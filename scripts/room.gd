@@ -4,15 +4,20 @@ var player_scene = preload("res://scenes/player.tscn")
 var door_scene = preload("res://scenes/door.tscn")
 var player = null
 var door = null
+var ui = null
 
-var levels = ["start", "static", "invisible", "switch_gravity", "bounce", "reverse_gravity", "0g", "fast", "ice",
+var levels = ["start", "static", "0g", "sonar", "invisible", "switch_gravity", "bounce", "reverse_gravity", "0g", "fast", "ice",
               "reverse_controls"]
 var current = 0
 
 func player_enter_door(body):
 	if body == player:
 		current += 1
-		load_level(current)
+		if current < levels.size():
+			load_level(current)
+		else:
+			pass
+			get_node("ui/victory").show()
 
 func load_level(level):
 	if player:
@@ -31,4 +36,7 @@ func load_level(level):
 	door.connect("body_enter", self, "player_enter_door")
 
 func _ready():
+	ui = get_node("ui")
+	get_node("ui/victory").hide()
+	get_node("ui/victory").set("custom_colors/font_color", Color(.8, 0, .6))
 	load_level(0)
