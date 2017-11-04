@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://scripts/room.gd" type="Script" id=1]
 [ext_resource path="res://assets/room.png" type="Texture" id=2]
 [ext_resource path="res://scenes/platform.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/music.ogg" type="AudioStream" id=4]
+[ext_resource path="res://assets/vhs.png" type="Texture" id=5]
 
 [node name="room" type="Control"]
 
@@ -80,5 +81,13 @@ stream/autoplay = true
 stream/paused = false
 stream/loop_restart_time = 0.0
 stream/buffering_ms = 500
+
+[node name="Sprite" type="Sprite" parent="."]
+
+visibility/opacity = 0.88
+visibility/blend_mode = 3
+z/z = 2
+texture = ExtResource( 5 )
+centered = false
 
 

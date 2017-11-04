@@ -41,7 +41,7 @@ func get_input(delta):
 		a.x -= SPEED * SPEED_FACTOR * delta
 	if Input.is_action_pressed("ui_right"):
 		a.x += SPEED * SPEED_FACTOR * delta
-	if Input.is_action_pressed("ui_select") and is_colliding() and abs(get_collision_normal().y + G.y) < 0.01:
+	if Input.is_action_pressed("ui_select") and is_colliding() and abs(get_collision_normal().y + sign(G.y)) < 0.01:
 		v.y -= JUMP_HEIGHT * JUMP_FACTOR
 
 func unstick(delta):
