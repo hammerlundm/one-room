@@ -1,4 +1,4 @@
-extends Node
+extends "player.gd"
 
-func apply(player):
-	player.FRICTION = 0.1
+func apply():
+	FRICTION = 0.1

@@ -15,18 +15,20 @@ export(float) var GRAVITY_FACTOR = 10.0
 export(float) var JUMP_FACTOR = 10.0
 var effect = null
 
+func apply():
+	pass
+
 func _ready():
 	set_fixed_process(true)
+	apply()
 
-func load_effect(name):
-	var effect = load("res://scripts/level_" + name + ".gd").new()
-	effect.apply(self)
-
-func update_pos(delta):
-	v += a * delta
+func do_friction(delta):
 	var f = pow(0.5, FRICTION * FRICTION_FACTOR * delta)
 	v.x *= f
 	a.x *= f*f
+
+func update_pos(delta):
+	v += a * delta
 	move(v)
 
 func do_gravity(delta):
@@ -47,6 +49,7 @@ func unstick(delta):
 
 func _fixed_process(delta):
 	update_pos(delta)
+	do_friction(delta)
 	do_gravity(delta)
 	unstick(delta)
 	get_input(delta)
