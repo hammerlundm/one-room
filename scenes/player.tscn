@@ -1,18 +1,50 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=13 format=1]
 
 [ext_resource path="res://scripts/player.gd" type="Script" id=1]
-[ext_resource path="res://assets/player.png" type="Texture" id=2]
+[ext_resource path="res://assets/colored pngs/crawl_center.png" type="Texture" id=2]
+[ext_resource path="res://assets/colored pngs/crawl_left1.png" type="Texture" id=3]
+[ext_resource path="res://assets/colored pngs/crawl_left0.png" type="Texture" id=4]
+[ext_resource path="res://assets/colored pngs/crawl_right1.png" type="Texture" id=5]
+[ext_resource path="res://assets/colored pngs/crawl_right0.png" type="Texture" id=6]
+[ext_resource path="res://assets/colored pngs/crawl_up1.png" type="Texture" id=7]
+[ext_resource path="res://assets/colored pngs/crawl_up0.png" type="Texture" id=8]
+[ext_resource path="res://assets/colored pngs/crawl_up2.png" type="Texture" id=9]
+[ext_resource path="res://assets/colored pngs/crawl_up3.png" type="Texture" id=10]
 
-[sub_resource type="ConvexPolygonShape2D" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=3]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 0, 0, 192, 0, 192, 192, 0, 192 )
+points = Vector2Array( -96, -96, 96, -96, 96, 96, -96, 96 )
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "left",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "right",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "jump",
+"speed": 30.0
+} ]
 
 [node name="player" type="KinematicBody2D"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 1, 0 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -23,16 +55,18 @@ FRICTION_FACTOR = 4.5
 GRAVITY_FACTOR = 11.0
 JUMP_FACTOR = 13.0
 
-[node name="sprite" type="Sprite" parent="."]
+[node name="sprite" type="AnimatedSprite" parent="."]
 
-texture = ExtResource( 2 )
-centered = false
-region_rect = Rect2( 0, 0, 128, 128 )
+frames = SubResource( 2 )
+animation = "idle"
+frame = 2
+playing = true
 
 [node name="collision" type="CollisionPolygon2D" parent="."]
 
+transform/pos = Vector2( 1, 0 )
 build_mode = 0
-polygon = Vector2Array( 0, 0, 192, 0, 192, 192, 0, 192 )
+polygon = Vector2Array( -96, -96, 96, -96, 96, 96, -96, 96 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 

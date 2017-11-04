@@ -15,11 +15,13 @@ export(float) var FRICTION_FACTOR = 4.5
 export(float) var GRAVITY_FACTOR = 11.0
 export(float) var JUMP_FACTOR = 13.0
 var effect = null
+var sprite
 
 func apply():
 	pass
 
 func _ready():
+	sprite = get_node("sprite")
 	set_fixed_process(true)
 	apply()
 	set_pos(INIT_POS)
@@ -36,13 +38,21 @@ func update_pos(delta):
 func do_gravity(delta):
 	v += G * GRAVITY_FACTOR * delta
 
+func jump(delta):
+	v.y -= JUMP_HEIGHT * JUMP_FACTOR
+	sprite.play("jump")
+
 func get_input(delta):
 	if Input.is_action_pressed("ui_left"):
 		a.x -= SPEED * SPEED_FACTOR * delta
+		if is_colliding() and abs(get_collision_normal().y + sign(G.y)) < 0.01:
+			sprite.play("left")
 	if Input.is_action_pressed("ui_right"):
 		a.x += SPEED * SPEED_FACTOR * delta
+		if is_colliding() and abs(get_collision_normal().y + sign(G.y)) < 0.01:
+			sprite.play("right")
 	if Input.is_action_pressed("ui_select") and is_colliding() and abs(get_collision_normal().y + sign(G.y)) < 0.01:
-		v.y -= JUMP_HEIGHT * JUMP_FACTOR
+		jump(delta)
 
 func unstick(delta):
 	if is_colliding():
