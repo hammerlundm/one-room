@@ -31,4 +31,3 @@ func load_level(level):
 
 func _ready():
 	load_level(0)
-	apply()
