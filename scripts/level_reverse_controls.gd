@@ -1,4 +1,4 @@
-extends Node
+extends "player.gd"
 
-func apply(player):
-	player.SPEED = -1.0
+func apply():
+	SPEED = -1.0
