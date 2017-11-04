@@ -26,32 +26,60 @@ modulate = Color( 0.429688, 0.0436401, 0.0436401, 1 )
 
 [node name="platform" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 883.858, 1213.95 )
+transform/pos = Vector2( 890.473, 2627.97 )
+
+[node name="platform11" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 1491.14, 1305.37 )
+transform/scale = Vector2( 2, 1 )
+
+[node name="platform10" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 1112.43, 436.577 )
+
+[node name="platform8" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 2078.33, 1020.74 )
+transform/rot = 90.0
+
+[node name="platform9" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 2492.44, 814.666 )
+transform/rot = 90.0
+
+[node name="platform6" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -0.274826, 585.061 )
+
+[node name="platform7" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 511.729, 777.28 )
+transform/rot = 90.0
 
 [node name="platform5" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 991.667, 483.932 )
+transform/pos = Vector2( 998.282, 1897.94 )
 
 [node name="platform1" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 1647.76, 899.765 )
+transform/pos = Vector2( 1654.37, 2313.78 )
 
 [node name="platform2" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 2254.57, 1152.35 )
+transform/pos = Vector2( 2261.18, 2566.37 )
 
 [node name="platform3" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 2566.43, 619.463 )
+transform/pos = Vector2( 2573.04, 2033.48 )
 
 [node name="platform4" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 2.90747, 896.685 )
+transform/pos = Vector2( -1.2384, 2310.7 )
 transform/scale = Vector2( 1, 4 )
 
 [node name="floor" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( -120.595, 1540.46 )
+transform/pos = Vector2( -114.879, 3078.2 )
 transform/scale = Vector2( 6.47754, 1 )
 
 [node name="ceiling" parent="." instance=ExtResource( 3 )]
@@ -61,15 +89,15 @@ transform/scale = Vector2( 6.47754, 1 )
 
 [node name="wallLeft" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( -192, 1536 )
+transform/pos = Vector2( -196.399, 3343.91 )
 transform/rot = 90.0
-transform/scale = Vector2( 3.40486, 1 )
+transform/scale = Vector2( 6.66688, 1 )
 
 [node name="wallRight" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 3072, 1626.95 )
+transform/pos = Vector2( 3074.69, 3135.51 )
 transform/rot = 90.0
-transform/scale = Vector2( 3.40486, 1 )
+transform/scale = Vector2( 8.88661, 1 )
 
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 
@@ -84,6 +112,7 @@ stream/buffering_ms = 500
 
 [node name="Sprite" type="Sprite" parent="."]
 
+visibility/visible = false
 visibility/opacity = 0.88
 visibility/blend_mode = 3
 z/z = 2
