@@ -17,9 +17,6 @@ margin/bottom = 1024.0
 [node name="player" parent="." instance=ExtResource( 1 )]
 
 z/z = 1
-SPEED_FACTOR = 100.0
-FRICTION_FACTOR = 5.0
-GRAVITY_FACTOR = 5.0
 
 [node name="background" type="Sprite" parent="."]
 
