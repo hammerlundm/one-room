@@ -1,6 +1,6 @@
 extends Area2D
 
-var INIT_POS = Vector2(200, 705)
+var INIT_POS = Vector2(200, 2048)
 
 func apply():
 	pass

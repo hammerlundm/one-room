@@ -24,7 +24,6 @@ script/script = ExtResource( 1 )
 
 texture = ExtResource( 2 )
 centered = false
-modulate = Color( 0, 0.835938, 1, 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 
