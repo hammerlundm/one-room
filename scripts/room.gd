@@ -5,7 +5,7 @@ var door_scene = preload("res://scenes/door.tscn")
 var player = null
 var door = null
 
-var levels = ["start", "switch_gravity", "bounce", "reverse_gravity", "0g", "fast", "ice",
+var levels = ["start", "static", "invisible", "switch_gravity", "bounce", "reverse_gravity", "0g", "fast", "ice",
               "reverse_controls"]
 var current = 0
 
