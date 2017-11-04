@@ -12,7 +12,7 @@ var a = Vector2(0, 0)
 export(float) var SPEED_FACTOR = 150.0
 export(float) var FRICTION_FACTOR = 5.0
 export(float) var GRAVITY_FACTOR = 10.0
-export(float) var JUMP_FACTOR = 10.0
+export(float) var JUMP_FACTOR = 10.1
 var effect = null
 
 func _ready():
