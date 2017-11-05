@@ -13,7 +13,7 @@ var a = Vector2(0, 0)
 export(float) var SPEED_FACTOR = 150.0
 export(float) var FRICTION_FACTOR = 4.5
 export(float) var GRAVITY_FACTOR = 11.0
-export(float) var JUMP_FACTOR = 13.0
+export(float) var JUMP_FACTOR = 14.0
 var effect = null
 var sprite
 

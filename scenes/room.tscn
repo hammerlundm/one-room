@@ -34,7 +34,7 @@ script/script = ExtResource( 1 )
 
 stream/stream = ExtResource( 2 )
 stream/play = false
-stream/loop = false
+stream/loop = true
 stream/volume_db = 0.0
 stream/autoplay = true
 stream/paused = false

@@ -53,7 +53,7 @@ script/script = ExtResource( 1 )
 SPEED_FACTOR = 150.0
 FRICTION_FACTOR = 4.5
 GRAVITY_FACTOR = 11.0
-JUMP_FACTOR = 13.0
+JUMP_FACTOR = 14.0
 
 [node name="sprite" type="AnimatedSprite" parent="."]
 

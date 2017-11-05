@@ -6,8 +6,8 @@ var player = null
 var door = null
 var ui = null
 
-var levels = ["start", "screen_angle", "screen_sideways", "screen_rotation", "fake_doors", "alt_controls", "static", "0g", "sonar", "invisible", "switch_gravity", "bounce", "reverse_gravity",
-              "reverse_controls"]
+var levels = ["start","screen_rotation","reverse_controls","fake_doors","screen_sideways", "bounce", "screen_angle", "reverse_gravity", "static","alt_controls","0g", "invisible", "sonar",
+              "switch_gravity"]
 var current = 0
 
 func player_enter_door(body):
